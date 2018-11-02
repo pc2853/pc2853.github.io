@@ -1,0 +1,52 @@
+---
+title: "resume"
+author: "pc2853"
+date: "November 2, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+PENGXUAN CHEN
+===============
+pc2853@cumc.columbia.edu
+
+Education
+---------
+
+**University of Washington**, Seattle, WA, BS 
+
+Major in Biology, Minor in Statistics
+August. 2014 - June. 2018
+
+**Mailman school of Columbia University**, New York, MS
+
+Master of Science in Biostatistics, Statistical Genetics track
+August. 2018 - June. 2020
+
+Skil
+---------
+
+**Research**
+
+experience with fruit flies, Arabidopsis and Giardia gene, PCR/rt-PCR, western blotting, light microscopy, gel electrophoresis, lab report writing, and any related basic molecular biology lab technique.
+
+**Computer Tools**
+
+R, Java, Microsoft Office
+
+Publication
+---------
+
+FEBS Open Bio, Second Author
+
+*Xiao, Kang, Pengxuan Chen, and Donald Choy Chang. “The VTLISFG Motif in the BH1 Domain Plays a Significant Role in Regulating the Degradation of Mcl-1.” FEBS Open Bio 4 (2014): 147–152. PMC. Web. 13 Sept. 2017. *
+
+
+
+
+
+
+

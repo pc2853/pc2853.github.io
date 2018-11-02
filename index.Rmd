@@ -6,4 +6,4 @@ title: "Pengxuan Chen's Personal Website"
 
 This is Pengxuan Chen who is learning Data Sicence course from the MS program in Biostatistics at Columbia University.
 I am an international student from China who have studied Biology as an undergraduate in th University of Washington.
-This site is made as a purpose to introduce myself by including my resume in the right above corner of the navigation bar. 
+This site is made as a purpose to introduce myself by including my CV/resume in the right above corner of the navigation bar. 
