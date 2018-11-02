@@ -1,0 +1,32 @@
+---
+title: "Plotly with NY NOAA dataset"
+author: "pc2853"
+date: "November 2, 2018"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(flexdashboard)
+library(tidyverse)
+library(viridis)
+library(p8105.datasets)
+library(plotly)
+```
+
+```{r data cleaning, include=FALSE}
+set.seed(1)
+
+data("ny_noaa")
+ny_noaa_clean = 
+  ny_noaa %>% 
+  filter(!is.na(tmax), !is.na(prcp), !is.na(tmin), !is.na(snow)) %>% 
+  separate(date, into = c("year", "month", "day"), convert = TRUE) %>% 
+  mutate(tmax = as.numeric(tmax), tmin = as.numeric(tmin)) %>% 
+  mutate(tmin = tmin / 10, tmax = tmax / 10, prcp = prcp / 10) %>% 
+  sample_n(5000)
+```
+
