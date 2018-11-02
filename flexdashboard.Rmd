@@ -15,6 +15,7 @@ library(tidyverse)
 library(viridis)
 library(p8105.datasets)
 library(plotly)
+library(forcats)
 ```
 
 ```{r data cleaning, include=FALSE}
@@ -28,5 +29,38 @@ ny_noaa_clean =
   mutate(tmax = as.numeric(tmax), tmin = as.numeric(tmin)) %>% 
   mutate(tmin = tmin / 10, tmax = tmax / 10, prcp = prcp / 10) %>% 
   sample_n(5000)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Scatterplot of max vs min temperature over the year.
+
+```{r scatterplot}
+ny_noaa_clean %>% 
+  plot_ly(x = ~tmin, y = ~tmax, type = "scatter", mode = "markers", alpha = 0.5, color = ~year)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Boxplot of minimum temperature through different months. 
+
+```{r boxplot}
+ny_noaa_clean %>% 
+  mutate(month = as.factor(month)) %>% 
+  mutate(month = fct_relevel(month, c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"))) %>% 
+  plot_ly(x = ~month, y = ~tmin, color = ~month, type = "box", colors = "Set2")
+```
+
+### barplot of mean monthly precipitation level across years.
+
+```{r barplot}
+ny_noaa_clean %>% 
+  mutate(month = as.factor(month)) %>% 
+  mutate(month = fct_relevel(month, c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"))) %>%
+  group_by(month) %>% 
+  summarize(mean_prcp = mean(prcp, na.rm = TRUE)) %>% 
+  plot_ly(x = ~month, y = ~mean_prcp, color = ~month, type = "bar", colors = "Set3")
 ```
 
