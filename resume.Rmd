@@ -1,7 +1,5 @@
 ---
 title: "resume"
-author: "pc2853"
-date: "November 2, 2018"
 output: html_document
 ---
 
@@ -9,12 +7,11 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-PENGXUAN CHEN
-===============
+### PENGXUAN CHEN
+
 pc2853@cumc.columbia.edu
 
-Education
----------
+#### Education
 
 **University of Washington**, Seattle, WA, BS 
 
@@ -26,8 +23,7 @@ August. 2014 - June. 2018
 Master of Science in Biostatistics, Statistical Genetics track
 August. 2018 - June. 2020
 
-Skil
----------
+#### Skill
 
 **Research**
 
@@ -37,8 +33,7 @@ experience with fruit flies, Arabidopsis and Giardia gene, PCR/rt-PCR, western b
 
 R, Java, Microsoft Office
 
-Publication
----------
+#### Publication
 
 FEBS Open Bio, Second Author
 
